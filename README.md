@@ -15,9 +15,6 @@ This is OpenSource AI where you put your image and AI learns to understand numbe
 I think this is: 6
 Is that correct? (1 = yes, 0 = no):
 
-yaml
-Копировать
-Редактировать
 4. If correct — input `1`  
 If incorrect — input `0`, then provide the correct label (e.g., `3`)  
 5. The image is saved as `Datasource/DataN.png` and used to train the model
@@ -37,9 +34,6 @@ DigitRecognizer/
 ├── Program.cs # Main loop: prediction and manual training
 └── Readme.md # This file
 
-yaml
-Копировать
-Редактировать
 
 ---
 
