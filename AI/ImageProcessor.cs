@@ -11,7 +11,7 @@ namespace DigitRecognizer.AI
         public static float[] LoadImageAsInput(string path, int width = 28, int height = 28)
         {
             if (!File.Exists(path))
-                throw new FileNotFoundException($"Изображение не найдено: {path}");
+                throw new FileNotFoundException($"Nohing found: {path}");
 
             using (Bitmap original = new Bitmap(path))
             using (Bitmap resized = new Bitmap(width, height))
@@ -30,13 +30,10 @@ namespace DigitRecognizer.AI
                     {
                         Color pixel = resized.GetPixel(x, y);
 
-                        // Преобразуем в оттенки серого
                         float gray = (pixel.R + pixel.G + pixel.B) / 3f;
 
-                        // Инвертируем (MNIST — белое на чёрном)
                         gray = 255f - gray;
 
-                        // Нормализуем от 0 до 1
                         float normalized = gray / 255f;
 
                         input[y * width + x] = normalized;
